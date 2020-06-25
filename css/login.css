@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-image: url(../img/loginback.jpeg);
+    background-size: 110%;
+    background-repeat: repeat-y;
+}
+
+.logotxt{
+    margin-left: 890px;
+    transition: 1s;
+}
+.logotxt:hover{
+    margin-left: 890px;
+    transition: 1s;
+    -webkit-filter: drop-shadow(0px 0px 15px rgb(255, 0, 255));
+    filter: drop-shadow(0px 0px 15px rgb(255, 0, 255));
+}
+.loginblock{
+  
+    margin-left: 750px;
+    -webkit-filter: drop-shadow(0px 0px 15px rgb(255, 0, 255));
+    filter: drop-shadow(0px 0px 15px rgba(255, 0, 255, 0.699));
+
+}
+.txt1{
+    color: white;
+    margin-left: -40px;
+
+}
+.txt2{
+    color: white;
+    margin-left: -70px;
+
+}
+
+.btn{
+    margin-left: 950px;
+}
+.cadastro{
+    color: white;
+    margin-left: 858px;
+}
