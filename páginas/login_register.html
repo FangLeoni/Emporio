@@ -115,179 +115,150 @@ body {
     </nav>
 
 <!-- ====================== Barra de navegação =====================-->
-    
-    LOGIN OR REGISTER
-        <div class="page-grid">
-            <div class="page-columns-span">
-                <img src="../images/login_register_titles.png" alt="Login ou Cadastro" class="responsive-titles">
-            </div>
-
-   
-
     <!--REGISTER FORM-->
-            <div class="cad">
-                <form name="cadastro" action="" class="register-grid"><!--Adicionar página de destino no atributo action. Apagar este comentário.-->
-                    <div class="title-register-gap"></div>
-                    <div></div>
-                    <div class="register-columns-span">
-                        <input type="text" name="nome" id="nome" placeholder="Nome" class="inputs-style register-inputs-size1" required>
-                    </div>
-                    <div></div>
-                    <div class="register-columns-span">
-                        <input type="text" name="nome do pet" id="nome do pet" placeholder="Nome do Pet" class="inputs-style register-inputs-size1" required>
-                    </div>
-                    <div></div>
-                    <div class="register-columns-span">
-                        <input type="email" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="inputs-style register-inputs-size1" required>
-                    </div>
-                    <div></div>
-                    <div>
-                        <input type="password" name="senha" id="senha" placeholder="Senha" class="inputs-style register-inputs-size2" required>
-                    </div>
-                    <div>
-                        <input type="password" name="confirmar senha" id="confirmar senha" placeholder="Confirme a Senha" class="inputs-style register-inputs-size2" required>
-                    </div>
-                    <div></div>
-                    <div>
-                        <label for="data de nascimento"><p class="texto-labels-register">Data de Nascimento:</p></label>
-                    </div>
-                    <div>
-                        <label for="gênero"><p class="texto-labels-register">Gênero:</p></label>
-                    </div>
-                    <div></div>
-                    <div>
-                            <input type="date" name="data de nascimento" id="data de nascimento" class="inputs-style register-inputs-size2" required>
-                    </div>
-                    <div>
-                            <select name="genero" id="genero" class="select-input-style" required>
-                                <option value="" disabled selected hidden>Selecione</option>
-                                <option value="masculino">Masculino</option>
-                                <option value="feminino">Feminino</option>
-                                <option value="outros">Outros</option>
-                            </select>
-                    </div>
-                    <div></div>
-                    <div class="register-columns-span">
-                        <input type="number" name="cpf" id="cpf" placeholder="CPF: 000.000.000-00" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" oninput="maxLengthCheck(this)" maxlength="14" class="inputs-style register-inputs-size1" required >
-                    </div>
-                    <div></div>
-                    <div>
-                        <input type="tel" name="telefone1" id="telefone1" placeholder="Tel.: (00) 0000-0000" maxlength="15" pattern="\(?[0-9]{2}\)?\ ?[0-9]{4,6}-?[0-9]{3,4}$" class="inputs-style register-inputs-size2" required>
-                    </div>
-                    <div>
-                        <input type="tel" name="telefone2" id="telefone2" placeholder="Tel.: (00) 0000-0000" maxlength="15" pattern="\(?[0-9]{2}\)?\ ?[0-9]{4,6}-?[0-9]{3,4}$" class="inputs-style register-inputs-size2">
-                    </div>
-                    <div></div>
-                    <div>
-                        <select for="estado" name="estado" id="estado" class="select-input-style" required>
-                            <option value="" disabled selected hidden>Estado</option>
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                        </select>
-                    </div>
-                    <div>
-                        <input type="number" name="cep" id="cep" placeholder="CEP: 00000-000" pattern="\d{5}-?\d{3}" oninput="maxLengthCheck(this)" maxlength="9" class="inputs-style register-inputs-size2" required>
-                    </div>
-                    <div></div>
-                    <div>
-                        <input type="text" name="bairro" id="bairro" placeholder="Bairro" class="inputs-style register-inputs-size2" required>
-                    </div>
-                    <div>
-                        <input type="text" name="cidade" id="cidade" placeholder="Cidade" class="inputs-style register-inputs-size2" required>
-                    </div>
-                    <div></div>
-                    <div>
-                        <input type="text" name="endereço" id="endereço" placeholder="Endereço" class="inputs-style register-inputs-size2" required>
-                    </div>
-                    <div>
-                        <input type="number" name="numero" id="numero" placeholder="Nº" class="inputs-style register-inputs-size2" required>
-                    </div>
-                    <div></div>
-                    <div class="register-columns-span">
-                        <input type="submit" name="cadastrar" id="cadastrar" value="Cadastrar" class="inputs-style register-button-size">
-                    </div>
-                </form>
+    <div class="center">
+        <form name="cadastro" action="" class="register-grid" onSubmit="submit();"><!--Adicionar página de destino no atributo action. Apagar este comentário.-->
+            <div class="title-register-gap"></div>
+            <div></div>
+            <div class="register-columns-span">
+                <input type="text" name="nome" id="nome" placeholder="Nome" class="inputs-style register-inputs-size1" required>
             </div>
-        </div>
-
-    <!--The script below makes possible define "maxlength" for number type inputs.-->
-        <script>
-            function maxLengthCheck(object) {
-                if (object.value.length > object.maxLength)
-                    object.value = object.value.slice(0, object.maxLength)
-            }
-        </script>
-
-    <!--FOOTER-->
-        <div class="footer-grid">
+            <div></div>
+            <div class="register-columns-span">
+                <input type="email" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="inputs-style register-inputs-size1" required>
+            </div>
+            <div></div>
             <div>
-                <a href="index.html"><img src="../img/logo.png" alt="Logo Empório" class="footer-logo shadows"></a>
+                <input type="password" name="senha" id="senha" placeholder="Senha" class="senha1 inputs-style register-inputs-size2" required  >
             </div>
             <div>
-                <list class="footer-general-text">
-                    <p>
-                        <span class="footer-gradient-text">Horário de Funcionamento</span><br>
-                        Segunda à sexta - 08h00 às 23h00<br>
-                        Sábado e domingo - 09h00 às 21h00
-                    </p>
-                </list>
+                <input type="password" name="confirmar senha" id="confirmar senha" placeholder="Confirme a Senha" class="senha2 inputs-style register-inputs-size2" required onblur="verifPass(this.value)">
+            </div>
+            <div></div>
+            <div>
+                <label for="data de nascimento"><p class="texto-labels-register">Data de Nascimento:</p></label>
             </div>
             <div>
-                <list class="footer-general-text">
-                    <p>
-                        <span class="footer-gradient-text">Loja Física </span>
-                        <a href="tel:13 1234 5678" class="shadows">13 1234 5678</a><br>
-                        <span class="footer-gradient-text">Email </span>
-                        <a href="mailto:noname@emporio.com" class="shadows">noname@emporio.com</a>
-                    </p>
-                </list>
-                <a href="https://www.facebook.com/"><img src="../images/facebook.png" alt="Facebook" class="social-networks shadows"></a>
-                <a href="https://www.instagram.com/"><img src="../images/instagram.png" alt="Instagram" class="social-networks shadows"></a>
+                <label for="gênero"><p class="texto-labels-register">Gênero:</p></label>
             </div>
-        </div>
-		
-		
-		<!--====================JS=================== -->
+            <div></div>
+            <div>
+                    <input type="date" name="data de nascimento" id="data de nascimento" class="inputs-style register-inputs-size2" required>
+            </div>
+            <div>
+                    <select name="genero" id="genero" class="select-input-style ajuste" required>
+                        <option value="" disabled selected hidden>Selecione</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outros">Outros</option>
+                    </select>
+            </div>
+            <div></div>
+            <div class="register-columns-span">
+                <input type="number" name="cpf" id="cpf" placeholder="CPF: 000.000.000-00" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" oninput="maxLengthCheck(this)" maxlength="14" class="inputs-style register-inputs-size1" required onblur="TestaCPF(this.value)">
+            </div>
+            <div></div>
+            <div>
+                <input type="tel" name="phonenumber1" id="phonenumber" placeholder="Tel.: (00) 0000-0000" maxlength="15" pattern="\(?[0-9]{2}\)?\ ?[0-9]{4,6}-?[0-9]{3,4}$" class="inputs-style register-inputs-size2" required>
+            </div>
+            <div>
+                <input type="tel" name="phonenumber2" id="phonenumber" placeholder="Tel.: (00) 0000-0000" maxlength="15" pattern="\(?[0-9]{2}\)?\ ?[0-9]{4,6}-?[0-9]{3,4}$" class="inputs-style register-inputs-size2">
+            </div>
+            <div></div>
+            <div>
+                <select for="estado" name="estado" id="estado" class="select-input-style ajuste" required>
+                    <option value="" disabled selected hidden>Estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+            <div>
+                <input type="number" name="cep" id="cep" placeholder="CEP: 00000-000" pattern="\d{5}-?\d{3}" oninput="maxLengthCheck(this)" maxlength="9" class="inputs-style register-inputs-size2" required>
+            </div>
+            <div></div>
+            <div>
+                <input type="text" name="bairro" id="bairro" placeholder="Bairro" class="inputs-style register-inputs-size2" required>
+            </div>
+            <div>
+                <input type="text" name="cidade" id="cidade" placeholder="Cidade" class="inputs-style register-inputs-size2" required>
+            </div>
+            <div></div>
+            <div>
+                <input type="text" name="endereço" id="endereço" placeholder="Endereço" class="inputs-style register-inputs-size2" required>
+            </div>
+            <div>
+                <input type="number" name="numero" id="numero" placeholder="Nº" class="inputs-style register-inputs-size2" required>
+            </div>
+            <div></div>
+            <div class="register-columns-span">
+                <input type="submit" name="cadastrar" id="cadastrar" value="Cadastrar" class="inputs-style register-button-size">
+            </div>
+        </form>
+    </div>
+</div>
 
+<!--The script below makes possible define "maxlength" for number type inputs.-->
+<script>
+    function maxLengthCheck(object) {
+        if (object.value.length > object.maxLength)
+            object.value = object.value.slice(0, object.maxLength)
+    }
+</script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+<!--FOOTER-->
+<div class="footer-grid">
+    <div>
+        <a href="index.html"><img src="images/logo.png" alt="Logo Empório" class="footer-logo shadows"></a>
+    </div>
+    <div>
+        <list class="footer-general-text">
+            <p>
+                <span class="footer-gradient-text">Horário de Funcionamento</span><br>
+                Segunda à sexta - 08h00 às 23h00<br>
+                Sábado e domingo - 09h00 às 21h00
+            </p>
+        </list>
+    </div>
+    <div>
+        <list class="footer-general-text">
+            <p>
+                <span class="footer-gradient-text">Loja Física </span>
+                <a href="tel:13 1234 5678" class="shadows">13 1234 5678</a><br>
+                <span class="footer-gradient-text">Email </span>
+                <a href="mailto:noname@emporio.com" class="shadows">noname@emporio.com</a>
+            </p>
+        </list>
+        <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook" class="social-networks shadows"></a>
+        <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram" class="social-networks shadows"></a>
+    </div>
+</div>
 
-
-
-
+<script src="../js/javascript.js"></script>
 	<script src="../js/barra.js" ></script>
 
 <!--====================JS=================== -->
