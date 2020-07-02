@@ -1,11 +1,6 @@
 let carts = document.querySelectorAll(".add-cart");
-let nome = document.querySelector(".prod-name");
-let img = document.querySelectorAll(".produto");
-let precoProduto = document.querySelectorAll(".precoProduto")
-// .getAttribute("src")
-let adicionador = document.querySelectorAll('.addItem');
 	
-	
+
 
 let products = [
 	{

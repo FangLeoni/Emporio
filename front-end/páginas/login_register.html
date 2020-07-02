@@ -5,13 +5,12 @@
     <meta name="author" content="Arthur Silles Fernandes 1DS2">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empório Plasir Demanger</title>
-    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="icon" type="image/png" href="../img/logo.png">
     <!--Adicionar links para outras stylesheets acima do link abaixo, garantindo assim que os estilos definidos nela não sejam sobrepostos pela stylesheet adicionada. Apagar este comentário.-->
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
 	<link rel="stylesheet" href="../css/barra.css">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 	
 	<style>
 .footer-logo{
@@ -67,54 +66,54 @@ body {
         <!-- ====================== Barra de navegação =====================-->
 
     <nav class="cont">
-	 <div class="hamb-cont" onclick="myFunction()">
-	    <div class="hambuguer"></div>
-		<div class="hambuguer"></div>
-		<div class="hambuguer"></div>
-	 </div>
-	 
-         <ul class="nav-list">
-		 
-        <li class="gatilho">
-	    <img class="icon " src="../img/icon1.png">
-		
-		<h5 class="invisivel">
-		<a href="pagina_produtos.html" class="nounderline">Nossos Produtos</a>
-		</h5>
-		
-	    </li>
-
-        <li class="gatilho">
-	    <img class="icon icon2" src="../img/icon2.png">
-	    <h5 class="invisivel">
-	    <a href="contacts.html" class="nounderline">Nos Encontre</a>
-		</h5>
-	    </li>
-	    
-		</ul>
-		
-		<a href="../index.html"><img class="logo" src="../img/logo.png"></a>
-		
-		<ul class="nav-list">
-		
-            <li class="gatilho">
-            <img class="icon icon3" src="../img/icon4.png">
-	    <h5 class="invisivel">
-	    <a href="carrinho.html" class="nounderline">Carrinho</a>
-	    </h5>
-	    </li>
-
-            <li class="gatilho">
-	    <img class="icon " src="../img/icon3.png">
-	    <h5 class="invisivel">
-	    <a href="login.html" class="nounderline">Login</a>
-	    </h5>
-	    </li>
-         </ul>
-
-    </nav>
-
-<!-- ====================== Barra de navegação =====================-->
+        <div class="hamb-cont" onclick="myFunction()">
+           <div class="hambuguer"></div>
+           <div class="hambuguer"></div>
+           <div class="hambuguer"></div>
+        </div>
+        
+            <ul class="nav-list">
+            
+           <li class="gatilho">
+           <img class="icon " src="../img/icon1.png">
+           
+           <h5 class="invisivel">
+           <a href="/produtos" class="nounderline">Nossos Produtos</a>
+           </h5>
+           
+           </li>
+   
+           <li class="gatilho">
+           <img class="icon icon2" src="../img/icon2.png">
+           <h5 class="invisivel">
+           <a href="/contato" class="nounderline">Nos Encontre</a>
+           </h5>
+           </li>
+           
+           </ul>
+           
+           <a href="/"><img class="logo" src="../img/logo.png"></a>
+           
+           <ul class="nav-list">
+           
+               <li class="gatilho">
+               <img class="icon icon3" src="../img/icon4.png">
+           <h5 class="invisivel">
+           <a href="/produtos/carrinho" class="nounderline">Carrinho</a>
+           </h5>
+           </li>
+   
+               <li class="gatilho">
+           <img class="icon " src="../img/icon3.png">
+           <h5 class="invisivel">
+           <a href="/login" class="nounderline">Login</a>
+           </h5>
+           </li>
+            </ul>
+   
+       </nav>
+   
+   <!-- ====================== Barra de navegação =====================-->
     <!--REGISTER FORM-->
     <div class="center">
         <form name="cadastro" action="" class="register-grid" onSubmit="submit();"><!--Adicionar página de destino no atributo action. Apagar este comentário.-->
@@ -233,7 +232,7 @@ body {
 <!--FOOTER-->
 <div class="footer-grid">
     <div>
-        <a href="index.html"><img src="images/logo.png" alt="Logo Empório" class="footer-logo shadows"></a>
+        <a href="/"><img src="../img/logo.png" alt="Logo Empório" class="footer-logo shadows"></a>
     </div>
     <div>
         <list class="footer-general-text">
@@ -258,7 +257,7 @@ body {
     </div>
 </div>
 
-<script src="../js/javascript.js"></script>
+<script src="../bootstrap/js/javascript.js"></script>
 	<script src="../js/barra.js" ></script>
 
 <!--====================JS=================== -->

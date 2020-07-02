@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empório Plasir Demanger</title>
+    <!-- BOOTSTRAP -->
+	
+    <link rel="stylesheet" href="../css/barra.css">
+    <link rel="stylesheet" href="../css/compra_produtos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+		
+		<style>
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #000000;
+}
+
+.nounderline, .nounderline:link
+{ 
+    text-decoration:none; 
+    color: #FFF;
+	transition: All 0.8s ease-in;
+} 
+
+/* mouse over link */
+.nounderline:hover{
+  color: white;
+  transition: All 0.8s ease-in;
+}
+
+@media screen and (max-width: 768px){
+	.nounderline, .nounderline:link
+{ 
+    text-decoration:none; 
+    color: #FFF;
+	font-size: 2.5rem;
+	transition: All 0.8s ease-in;
+} 
+
+/* mouse over link */
+.nounderline:hover{
+  color: black;
+  transition: All 0.8s ease-in;
+}
+}
+
+.link-prod, .link-prod:link, .link-prod:active{
+	color: white;
+}
+a:-webkit-any-link {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+</style>
+		
+</head>
+
+<body>
+
+<!-- ====================== Barra de navegação =====================-->
+
+    <nav class="cont">
+	 <div class="hamb-cont" onclick="myFunction()">
+	    <div class="hambuguer"></div>
+		<div class="hambuguer"></div>
+		<div class="hambuguer"></div>
+	 </div>
+	 
+         <ul class="nav-list">
+		 
+        <li class="gatilho">
+	    <img class="icon " src="../img/icon1.png">
+		
+		<h5 class="invisivel">
+		<a href="/produtos" class="nounderline">Nossos Produtos</a>
+		</h5>
+		
+	    </li>
+
+        <li class="gatilho">
+	    <img class="icon icon2" src="../img/icon2.png">
+	    <h5 class="invisivel">
+	    <a href="/contato" class="nounderline">Nos Encontre</a>
+		</h5>
+	    </li>
+	    
+		</ul>
+		
+		<a href="/"><img class="logo" src="../img/logo.png"></a>
+		
+		<ul class="nav-list">
+		
+            <li class="gatilho">
+            <img class="icon icon3" src="../img/icon4.png">
+	    <h5 class="invisivel">
+	    <a href="/produtos/carrinho" class="nounderline">Carrinho</a>
+	    </h5>
+	    </li>
+
+            <li class="gatilho">
+	    <img class="icon " src="../img/icon3.png">
+	    <h5 class="invisivel">
+	    <a href="/login" class="nounderline">Login</a>
+	    </h5>
+	    </li>
+         </ul>
+
+    </nav>
+
+<!-- ====================== Barra de navegação =====================-->
+
+
+<div class="container-produtos">
+<form method="POST" action="/produtos/">
+<ul class="opcoes-de-busca">
+<li>
+	<input type="text" name="pesquisa" size="25" placeholder="Digite o nome do produto">
+</li>
+
+<li>
+<select class="tipos">
+	<option value="prod-container">Mostrar Todos</option>
+	<option value="doce">Doces</option>
+	<option value="salgado">Salgados</option>
+</select>
+</li>
+<li>
+
+</li>
+
+</ul>
+<form>
+<form>
+<div class="sub-container">
+
+	<div class="prod-container salgado">
+		<div class="label">
+			<img class="produto" src="../produtos/bolinho-chines.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name"> Bolinnho Chinês </h5>
+			<div><span>R$:</span> <span class="precoProduto " > 12.00 </span></div>
+			</a>
+			<a class="add-cart " href="#" >Add ao Carrinho</a>
+			<input type="hidden" value="15">
+		</div>
+	</div>
+	
+	<div class="prod-container salgado">
+		<div class="label">
+			<img class="produto" src="../produtos/Macarronada.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Macarronada </h5>
+			<div><span>R$:</span> <span class="precoProduto " > 12.00 </span></div>
+			</a>
+			<a class="add-cart " href="#" >Add ao Carrinho</a>
+			<input type="hidden" value="15">
+		</div>
+	</div>
+	
+	<div class="prod-container doce">
+		<div class="label">
+			<img class="produto" src="../produtos/donuts.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Donuts  </h5>
+			<div><span>R$:</span> <span class="precoProduto " > 12.00 </span></div>
+			</a>
+			<a class="add-cart " href="#" >Add ao Carrinho</a>	
+			<input type="hidden" value="15">
+		</div>
+	</div>
+	
+	<div class="prod-container salgado">
+		<div class="label">
+			<img class="produto" src="../produtos/espinafre.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Espinafre </h5>
+			<div><span>R$:</span> <span class="precoProduto " > 12.00 </span></div>
+			</a>
+			<a class="add-cart " href="#" >Add ao Carrinho</a>
+			<input type="hidden" value="15">
+		</div>
+	</div>
+	
+	<div class="prod-container salgado">
+		<div class="label">
+			<img class="produto" src="../produtos/cenoura.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Cenoura </h5>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+			</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+	
+	<div class="prod-container doce">
+		<div class="label">
+			<img class="produto" src="../produtos/bolo-lars.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">UBE </h5>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+			</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+	
+	<div class="prod-container doce">
+		<div class="label">
+			<img class="produto" src="../produtos/banana.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Banana </h5>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+			</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+	
+	<div class="prod-container salgado">
+		<div class="label">
+			<img class="produto" src="../produtos/onion-rings.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Onion Rings </h5>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+			</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+	
+	<div class="prod-container salgado ">
+		<div class="label">
+			<img class="produto" src="../produtos/ramen.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Ramen  </h5>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+			</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+	
+	<div class="prod-container doce">
+		<div class="label">
+			<img class="produto" src="../produtos/biscoitos-scooby.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Biscoitos Scooby </h5>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+			</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+	
+	<div class="prod-container doce">
+		<div class="label">
+			<img class="produto" src="../produtos/lego-gelatina.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Lego de gelatina </h5>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+			</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+	
+	<div class="prod-container salgado">
+		<div class="label">
+			<img class="produto" src="../produtos/lasanha.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Lasanha </h5>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+			</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+	
+	<div class="prod-container salgado">
+		<div class="label">
+			<img class="produto" src="../produtos/hamburuger-siri.jpeg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Hamburguer de Siri </h5>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+			</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+	
+	<div class="prod-container salgado">
+		<div class="label">
+			<img class="produto" src="../produtos/pizza.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Pizza </a></span>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+		</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+	
+	<div class="prod-container doce">
+		<div class="label">
+			<img class="produto" src="../produtos/melancia.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Melancia </h5>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+			</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+	
+	<div class="prod-container doce">
+		<div class="label">
+			<img class="produto" src="../produtos/mel.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Mel </h5>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+			</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+	
+	<div class="prod-container salgado">
+		<div class="label">
+			<img class="produto" src="../produtos/ratatoullie.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Rattatoullie </h5>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+			</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+	
+	<div class="prod-container doce">
+		<div class="label">
+			<img class="produto" src="../produtos/choco-wonka.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Chocolates Wonka </h5>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+			</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+	
+	<div class="prod-container doce">
+		<div class="label">
+			<img class="produto" src="../produtos/feijoes.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Feijôes de todos os sabores </h5>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+			</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+	
+	<div class="prod-container salgado">
+		<div class="label">
+			<img class="produto" src="../produtos/calzone.jpg">
+			<a href="#" class="link-prod">
+			<h5 class="prod-name">Calzones </h5>
+			<div><span>R$:</span> <span class="precoProduto " >12.00 </span></div>
+			</a>
+			<a href="#" >Add ao Carrinho</a>
+		</div>
+	</div>
+</div>
+</form>
+</div>
+
+	<script src="../js/produtos.js"></script>
+	<script src="../js/teste.js"></script>
+
+<!--====================JS=================== -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+		
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="../js/barra.js" ></script>
+
+<!--====================JS=================== -->
+
+	
+
+
+
+<!-- =============================================================================== -->
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+</body>
+</html>
+

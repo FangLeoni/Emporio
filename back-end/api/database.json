@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "name": "Bruna Oliveira",
+      "email": "bruna.fontes@gmail.com",
+      "password": 12345,
+      "birth": "16/01/2001",
+      "gender": "femi",
+      "cpf": "233-326-760-12",
+      "tel1": "(13)4970-233",
+      "tel2": null,
+      "ef": "sp",
+      "city": "São Vicente"
+    },
+    {
+      "name": "Lucas Fontes",
+      "email": "lucas.fontes@gmail.com",
+      "password": 12345,
+      "birth": "16/02/2004",
+      "gender": "masc",
+      "cpf": "123-456-890-12",
+      "tel1": "(13)4028-922",
+      "tel2": null,
+      "ef": "sp",
+      "city": "São Vicente"
+    }
+  ]
+}
