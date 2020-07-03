@@ -102,14 +102,22 @@ input[type=text]
 
 .hidden{
 	display: none;
+
 }
 
 .add-cart
 {
 	width:100%;
 	height: 100%;
-
+	color: white;
+	cursor: pointer;
 }
+.add-cart-click
+{
+	background-color: rgba(60,60,60,0.8);
+}
+
+
 
 h5, h6
 {
