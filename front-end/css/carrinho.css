@@ -180,6 +180,7 @@ form::-webkit-scrollbar-thumb {
 {
 	border: 2px #c0239e solid;
 	display: flex;
+	position: fixed;
 }
 
 .TotalContainer > h4 

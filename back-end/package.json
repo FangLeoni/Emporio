@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
-    "api": "nodemon api/index.js"
+    "api": "nodemon api/index.js",
+    "database": "nodemon database/index.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "nodemon": "^2.0.4"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   }
 }

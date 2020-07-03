@@ -19,88 +19,64 @@ async function deleteFromCart(nome){
 	await fetch("http://localhost:5000/products/delete",options)
 }
 
-async function addToCart(link,nome,preco){
-	// if(num >= 1){
+async function addToCart(link,nome,preco,num){
+	if(num > 1)
+	{
 
-	// 	let data = {
-	// 		"name":nome,
-	// 		"img":link,
-	// 		"price":preco,
-	// 		"inCart":num
-	// 	}
-	// 	options = {
-	// 		method: 'PUT',
-	// 		body: JSON.stringify(data),
-	// 		headers:{
-	// 			'Content-Type': 'application/json'
-	// 		}
-	// 	}
+		let data = 
+		{
+			"name":nome,
+			"img":link,
+			"price":preco,
+			"inCart":num
+		}
+		options = 
+		{
+			method: 'PUT',
+			body: JSON.stringify(data),
+			headers:
+			{
+				'Content-Type': 'application/json'
+			}
+		}
 		
-	// 	await fetch("http://localhost:5000/products/update",options)
-	// 	console.log(nome, num)
+		await fetch("http://localhost:5000/products/update",options)
+		console.log(nome, num)
 
 
-	// }
-	// else{
-    let data = {
+	}
+	else
+	{
+	let data = 
+	{
         "name":nome,
         "img":link,
-        "price":preco
-        // "inCart":num
+        "price":preco,
+        "inCart":num
     }
-    options = {
+	options = 
+	{
         method: 'POST',
         body: JSON.stringify(data),
-        headers:{
+		headers:
+		{
             'Content-Type': 'application/json'
         }
     }
     
     await fetch("http://localhost:5000/products/add",options)
-	console.log(nome)
+	console.log(nome,num)
 	}
-// }
-
-// async function getCart(i){
-// 	let cartItems = await fetch("http://localhost:5000/products").then((data) => data.json())
-	
-// 	let num = cartItems[i].inCart;
-// 	num++;
-// 	console.log(num)
-	
-// 	// else{
-// 	// console.log("NÂO")
-// 	// // addToCart(product[i].getAttribute("src"),name[i].innerText,price[i].innerText,num)
-// 	// }
-// 	let cartItems = localStorage.getItem("productsInCart");
-// 	cartItems = JSON.parse(cartItems);
-	
-// 	if(cartItems != null) {
-// 		if(cartItems[product.tag] == undefined){
-// 			cartItems = {
-// 				...cartItems,
-// 				[product.tag]: product
-// 			}
-// 		}
-// 		cartItems[product.tag].inCart += 1;
-// 	}else{
-// 		product.inCart = 1;
-// 		cartItems = {
-// 			[product.tag]: product
-// 		}
-// 	}
-// 	localStorage.setItem("productsInCart", JSON.stringify(cartItems));
-// }
+}
 
 for (let i = 0; i < addCart.length; i++){
 	
 	let num = 0;
 	addCart[i].addEventListener("click", () => {
-		// getCart(i)
 		num++;
 		
-		addToCart(product[i].getAttribute("src"),name[i].innerText,price[i].innerText)
-		// console.log(i, product[i].getAttribute("src"),name[i].innerText,price[i].innerText);
+		addToCart(product[i].getAttribute("src"),name[i].innerText,price[i].innerText,num)
+		// console.log(i, product[i].getAttribute("src"),name[i].innerText,price[i].innerText,num);
 
 	})
 	addCart[i].addEventListener("mousedown",()=>{
@@ -124,10 +100,19 @@ async function displayCart(){
 	let cartItems = await fetch("http://localhost:5000/products").then((data) => data.json())
 	
 	let productContainer = document.querySelector(".product-container");
+	let contGeral = document.querySelector(".cont-geral")
 	
 	if(productContainer){
+		let cartCost = 0;
+
 		productContainer.innerHTML = "";
 		Object.values(cartItems).map(item => {
+			
+			Object.values(cartItems).map(element => {
+				cartCost += element.inCart * element.price
+				
+			});
+			console.log(cartCost)
 
 			const div1 = document.createElement('div');
 			const div2 = document.createElement('div');
@@ -140,6 +125,7 @@ async function displayCart(){
 			const span2 = document.createElement('span');
 			const div6 = document.createElement('h5');
 			const div7 = document.createElement('h5');
+			
 
 			div1.classList.add("prod-container");
 			div2.classList.add("label");
@@ -155,6 +141,9 @@ async function displayCart(){
 			div5.innerHTML = item.inCart;
 			div6.classList.add("total");
 			div7.innerHTML = item.inCart * item.price;
+
+			
+
 			productContainer.appendChild(div1);
 			div1.appendChild(div2);
 			div2.appendChild(span1);
@@ -166,11 +155,27 @@ async function displayCart(){
 			div4.appendChild(div5)
 			div2.appendChild(div6);
 			div6.appendChild(div7);
+			
+			
+
 
 			span1.onclick = ()=> removeElement(span1,h51.innerText)
 
 			
 		});	
+
+		const div8 = document.createElement('div');
+		const h41 = document.createElement('h4')
+		const h42 = document.createElement('h4')
+
+		div8.classList.add("TotalContainer");
+		h41.classList.add("TotalTitle");
+		h41.innerHTML = "Total a pagar";
+		h42.classList.add("Total");
+		h42.innerHTML = `${cartCost/2}`
+		contGeral.appendChild(div8);
+		div8.appendChild(h41);
+		div8.appendChild(h42);
 	}
 }
 

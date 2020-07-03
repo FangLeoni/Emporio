@@ -1,0 +1,22 @@
+{
+    "users-porducts":{
+      "123-456-890-12": [
+        {
+          "id": 1,
+          "name": "Bolinho Chinês",
+          "img": "../produtos/bolinho-chines.jpg",
+          "price": 8.50,
+          "inCart":0
+        }
+    ],
+    "233-326-760-12": [
+      {
+        "id": 1,
+        "name": "Bolinho Chinês",
+        "img": "../produtos/bolinho-chines.jpg",
+        "price": 8.50,
+        "inCart":0
+      }
+    ]
+  }
+}

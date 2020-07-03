@@ -2,8 +2,8 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 
-const database = path.join(__dirname,'database.json' );
-const content = require('./database.json').users
+const database = path.join(__dirname,'users.json' );
+const content = require('./users.json').users
 
 const app = express();
 

@@ -17,12 +17,6 @@ route.get('/produtos', (req,res) => {
 
 })
 
-route.post('/produtos', (req,res) => {
-    
-    
-
-})
-
 route.get('/produtos/carrinho', (req,res) => {
 
     res.sendFile(path.join(__dirname,'../','../','front-end','páginas','carrinho.html'))
@@ -44,6 +38,12 @@ route.get('/login', (req,res) => {
 route.get('/cadastro', (req,res) => {
 
     res.sendFile(path.join(__dirname,'../','../','front-end','páginas','login_register.html'))
+
+})
+
+route.get('/secret', (req,res) => {
+
+    res.sendFile(path.join(__dirname,'../','../','front-end','páginas','addproduto.html'))
 
 })
 

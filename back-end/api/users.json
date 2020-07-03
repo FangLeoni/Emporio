@@ -23,6 +23,19 @@
       "tel2": null,
       "ef": "sp",
       "city": "São Vicente"
+    },
+    {
+      "id": 1,
+      "name": "gui",
+      "email": "gui.fontes@gmail.com",
+      "password": 12345,
+      "birth": "16/02/2004",
+      "gender": "masc",
+      "cpf": "890-456-890-12",
+      "tel1": "(13)4028-922",
+      "tel2": null,
+      "ef": "sp",
+      "city": "São Vicente"
     }
   ]
 }
