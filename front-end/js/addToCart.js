@@ -3,10 +3,10 @@ const name = document.querySelectorAll(".prod-name")
 const price = document.querySelectorAll(".precoProduto")
 const addCart = document.querySelectorAll(".add-cart")
 
-async function deleteFromCart(nome){
+async function deleteFromCart(num){
 	
 	let data = {
-        "name":nome
+        "id": num
     }
     options = {
         method: 'DELETE',
@@ -15,7 +15,7 @@ async function deleteFromCart(nome){
             'Content-Type': 'application/json'
         }
 	}
-	console.log(nome)
+	console.log(num)
 	await fetch("http://localhost:5000/products/delete",options)
 }
 
@@ -88,31 +88,32 @@ for (let i = 0; i < addCart.length; i++){
 	
 }
 
-function removeElement(el,nome) {
+function removeElement(el,num) {
     if (confirm('Tem certeza que deseja deletar?')){
 		el.parentNode.remove()
 		
-		deleteFromCart(nome);
+		deleteFromCart(num);
     }
 }
 
 async function displayCart(){
 	let cartItems = await fetch("http://localhost:5000/products").then((data) => data.json())
 	
+	//   console.log(cartItems)
+	
+
 	let productContainer = document.querySelector(".product-container");
 	let contGeral = document.querySelector(".cont-geral")
 	
 	if(productContainer){
 		let cartCost = 0;
-
+		cartItems.map(element => {
+		cartCost += element.inCart * element.price
+		});
+		console.log(cartCost)
 		productContainer.innerHTML = "";
-		Object.values(cartItems).map(item => {
+		cartItems.map(item => {
 			
-			Object.values(cartItems).map(element => {
-				cartCost += element.inCart * element.price
-				
-			});
-			console.log(cartCost)
 
 			const div1 = document.createElement('div');
 			const div2 = document.createElement('div');
@@ -142,7 +143,6 @@ async function displayCart(){
 			div6.classList.add("total");
 			div7.innerHTML = item.inCart * item.price;
 
-			
 
 			productContainer.appendChild(div1);
 			div1.appendChild(div2);
@@ -155,12 +155,10 @@ async function displayCart(){
 			div4.appendChild(div5)
 			div2.appendChild(div6);
 			div6.appendChild(div7);
-			
-			
 
 
-			span1.onclick = ()=> removeElement(span1,h51.innerText)
-
+			span1.onclick = ()=> removeElement(span1,item.id)
+			console.log(item.id)
 			
 		});	
 
@@ -172,7 +170,7 @@ async function displayCart(){
 		h41.classList.add("TotalTitle");
 		h41.innerHTML = "Total a pagar";
 		h42.classList.add("Total");
-		h42.innerHTML = `${cartCost/2}`
+		h42.innerHTML = `${cartCost}`
 		contGeral.appendChild(div8);
 		div8.appendChild(h41);
 		div8.appendChild(h42);
