@@ -6,37 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empório Plasir Demanger</title>
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #000000;
+        }
+        
+        .nounderline, .nounderline:link
+        { 
+            text-decoration:none; 
+            color: #FFF;
+            transition: All 0.8s ease-in;
+        } 
+        
+        /* mouse over link */
+        .nounderline:hover{
+          color: white;
+          transition: All 0.8s ease-in;
+        }
+        
+        @media screen and (max-width: 768px){
+            .nounderline, .nounderline:link
+        { 
+            text-decoration:none; 
+            color: #FFF;
+            font-size: 2.5rem;
+            transition: All 0.8s ease-in;
+        } 
+        
+        /* mouse over link */
+        .nounderline:hover{
+          color: black;
+          transition: All 0.8s ease-in;
+        }
+        }
+        
+        
+        </style>
 </head>
 
 <body>
 
-    <input type="checkbox" id="chec">
-    <label for="chec">
-        <svg class="bi bi-list" width="3em" height="3em" viewBox="0 0 16 16" fill="white"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-                d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-        </svg>
-    </label>
-    <nav>
-        <ul>
-            <li><a class="item" href="index.html">HOME</a></li>
-            <li><a class="item" href="páginas/contacts.html">CONTATOS</a></li>
-            <li><a class="item" href="páginas/carrinho.html">NÓS ENTREGAMOS</a></li>
-            <li><a class="item" href="páginas/pagina_produtos.html">NOSSOS PRODUTOS</a></li>
-        </ul>
-    </nav>
+    <center>
+        <img class="bandeira-left" src="../img/bandeirola.png" style="width:14vw"> 
+        <img class="bandeira" src="../img/bandeirola.png" style="width:14vw"> 
+        <img class="bandeira" src="../img/bandeirola.png" style="width:14vw"> 
+        <img class="bandeira" src="../img/bandeirola.png" style="width:14vw">
+        <img class="bandeira" src="../img/bandeirola.png" style="width:14vw"> 
+        <img class="bandeira-right" src="../img/bandeirola.png" style="width:14vw">       
+    </center>
 
 
 
     <div class="hide">
-        <a href="páginas/pagina_produtos.html"><img class="icon1" src="img/icon1.png" width=80px></a>
-        <a href="páginas/contacts.html"><img class="icon2" src="img/icon2.png" width=50px></a>
-        <a href="páginas/login.html"><img class="icon3" src="img/icon3.png" width=80px></a>
-        <a href="páginas/carrinho.html"><img class="icon4" src="img/icon4.png" width=80px></a>
+        <a href="/produtos"><img class="icon1" src="img/icon1.png" width=80px></a>
+        <a href="/contatos"><img class="icon2" src="img/icon2.png" width=50px></a>
+        <a href="/login"><img class="icon3" src="img/icon3.png" width=80px></a>
+        <a href="/produtos/carrinho"><img class="icon4" src="img/icon4.png" width=80px></a>
     </div>
     <div class="list">
         <p class="text1">Nossos Produtos</p>
@@ -44,7 +75,7 @@
         <p class="text3">Nós Entregamos</p>
         <p class="text4">Login</p>
     </div>
-    <img class="logo" src="img/logo.png" width=250px>
+    <a href="/"><img class="logo" src="/img/logo.png" width=250px></a>
     <br> <br> <br> <br><br> <br>
 
     <!--CARROSSEL-->
@@ -62,19 +93,19 @@
         <div class="slide"></div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/img1.jpg" alt="Kit Simpsons">
+                <img src="/img/img1.jpg" alt="Kit Simpsons">
             </div>
             <div class="carousel-item">
-                <img src="img/img2.jpg" alt="Cachorro">
+                <img src="/img/img2.jpg" alt="Cachorro">
             </div>
             <div class="carousel-item">
-                <img src="img/img3.jpg" alt="Pestiscos ScoobyDoo">
+                <img src="/img/img3.jpg" alt="Pestiscos ScoobyDoo">
             </div>
             <div class="carousel-item">
-                <img src="img/img5.jpg" alt="Pestiscos ScoobyDoo">
+                <img src="/img/img5.jpg" alt="Pestiscos ScoobyDoo">
             </div>
             <div class="carousel-item">
-                <img src="img/img4.jpg" alt="Pestiscos ScoobyDoo">
+                <img src="/img/img4.jpg" alt="Pestiscos ScoobyDoo">
             </div>
         </div>
         <!-- Left and right controls -->
@@ -105,7 +136,7 @@
     <!-- CARDS -->
     <div class="card-columns">
         <div class="card">
-            <img src="img/mcfly.jpg" class="card-img-top" alt="Marty McFly">
+            <img src="/img/mcfly.jpg" class="card-img-top" alt="Marty McFly">
             <div class="card-body">
                 <h5 class="card-title">Marty McFly</h5>
                 <p class="card-text">Mesmo com o DeLorean do Drº Brown eu ainda não consegui encontrar em qualquer outra
@@ -114,7 +145,7 @@
             </div>
         </div>
         <div class="card">
-            <img src="img/thanos.jpg" class="card-img-top" alt="Thanos">
+            <img src="/img/thanos.jpg" class="card-img-top" alt="Thanos">
             <div class="card-body">
                 <h5 class="card-title">Thanos da Silva</h5>
                 <p class="card-text">Nem com as minhas seis jóias juntas eu conseguiria fazer doces tão maravilhosos. É
@@ -146,10 +177,10 @@
 
 
         <div class="card">
-            <img src="img/groot.jpg" class="card-img-top" alt="Vegeta">
+            <img src="/img/chicobento.jpg" class="card-img-top" alt="Vegeta">
             <div class="card-body">
-                <h5 class="card-title">Groot</h5>
-                <p class="card-text">Eu sou Groot!.</p>
+                <h5 class="card-title">Chico Bento</h5>
+                <p class="card-text">Arde, eu so o Chico Bento tchê, eu to é maravilhado com tanta gostosura, uma diliça.</p>
                 <p class="card-text"><small class="text-muted">Postado a 9 dias.</small></p>
             </div>
         </div>
@@ -165,7 +196,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>

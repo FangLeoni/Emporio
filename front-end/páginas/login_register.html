@@ -5,13 +5,12 @@
     <meta name="author" content="Arthur Silles Fernandes 1DS2">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empório Plasir Demanger</title>
-    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="icon" type="image/png" href="../img/logo.png">
     <!--Adicionar links para outras stylesheets acima do link abaixo, garantindo assim que os estilos definidos nela não sejam sobrepostos pela stylesheet adicionada. Apagar este comentário.-->
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
 	<link rel="stylesheet" href="../css/barra.css">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 	
 	<style>
 .footer-logo{
@@ -67,61 +66,61 @@ body {
         <!-- ====================== Barra de navegação =====================-->
 
     <nav class="cont">
-	 <div class="hamb-cont" onclick="myFunction()">
-	    <div class="hambuguer"></div>
-		<div class="hambuguer"></div>
-		<div class="hambuguer"></div>
-	 </div>
-	 
-         <ul class="nav-list">
-		 
-        <li class="gatilho">
-	    <img class="icon " src="../img/icon1.png">
-		
-		<h5 class="invisivel">
-		<a href="pagina_produtos.html" class="nounderline">Nossos Produtos</a>
-		</h5>
-		
-	    </li>
-
-        <li class="gatilho">
-	    <img class="icon icon2" src="../img/icon2.png">
-	    <h5 class="invisivel">
-	    <a href="contacts.html" class="nounderline">Nos Encontre</a>
-		</h5>
-	    </li>
-	    
-		</ul>
-		
-		<a href="../index.html"><img class="logo" src="../img/logo.png"></a>
-		
-		<ul class="nav-list">
-		
-            <li class="gatilho">
-            <img class="icon icon3" src="../img/icon4.png">
-	    <h5 class="invisivel">
-	    <a href="carrinho.html" class="nounderline">Carrinho</a>
-	    </h5>
-	    </li>
-
-            <li class="gatilho">
-	    <img class="icon " src="../img/icon3.png">
-	    <h5 class="invisivel">
-	    <a href="login.html" class="nounderline">Login</a>
-	    </h5>
-	    </li>
-         </ul>
-
-    </nav>
-
-<!-- ====================== Barra de navegação =====================-->
+        <div class="hamb-cont" onclick="myFunction()">
+           <div class="hambuguer"></div>
+           <div class="hambuguer"></div>
+           <div class="hambuguer"></div>
+        </div>
+        
+            <ul class="nav-list">
+            
+           <li class="gatilho">
+           <img class="icon " src="../img/icon1.png">
+           
+           <h5 class="invisivel">
+           <a href="/produtos" class="nounderline">Nossos Produtos</a>
+           </h5>
+           
+           </li>
+   
+           <li class="gatilho">
+           <img class="icon icon2" src="../img/icon2.png">
+           <h5 class="invisivel">
+           <a href="/contato" class="nounderline">Nos Encontre</a>
+           </h5>
+           </li>
+           
+           </ul>
+           
+           <a href="/"><img class="logo" src="../img/logo.png"></a>
+           
+           <ul class="nav-list">
+           
+               <li class="gatilho">
+               <img class="icon icon3" src="../img/icon4.png">
+           <h5 class="invisivel">
+           <a href="/produtos/carrinho" class="nounderline">Carrinho</a>
+           </h5>
+           </li>
+   
+               <li class="gatilho">
+           <img class="icon " src="../img/icon3.png">
+           <h5 class="invisivel">
+           <a href="/login" class="nounderline">Login</a>
+           </h5>
+           </li>
+            </ul>
+   
+       </nav>
+   
+   <!-- ====================== Barra de navegação =====================-->
     <!--REGISTER FORM-->
     <div class="center">
-        <form name="cadastro" action="" class="register-grid" onSubmit="submit();"><!--Adicionar página de destino no atributo action. Apagar este comentário.-->
+        <form name="register" id="register" action="" class="register-grid"><!--Adicionar página de destino no atributo action. Apagar este comentário.-->
             <div class="title-register-gap"></div>
             <div></div>
             <div class="register-columns-span">
-                <input type="text" name="nome" id="nome" placeholder="Nome" class="inputs-style register-inputs-size1" required>
+                <input type="text" name="name" id="name" placeholder="Nome" class="inputs-style register-inputs-size1" required>
             </div>
             <div></div>
             <div class="register-columns-span">
@@ -129,10 +128,10 @@ body {
             </div>
             <div></div>
             <div>
-                <input type="password" name="senha" id="senha" placeholder="Senha" class="senha1 inputs-style register-inputs-size2" required  >
+                <input type="password" name="password" id="password" placeholder="Senha" class="inputs-style register-inputs-size2" required>
             </div>
             <div>
-                <input type="password" name="confirmar senha" id="confirmar senha" placeholder="Confirme a Senha" class="senha2 inputs-style register-inputs-size2" required onblur="verifPass(this.value)">
+                <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirme a Senha" class="inputs-style register-inputs-size2" required>
             </div>
             <div></div>
             <div>
@@ -143,10 +142,10 @@ body {
             </div>
             <div></div>
             <div>
-                    <input type="date" name="data de nascimento" id="data de nascimento" class="inputs-style register-inputs-size2" required>
+                    <input type="date" name="birthday" id="birthday" class="inputs-style register-inputs-size2" required>
             </div>
             <div>
-                    <select name="genero" id="genero" class="select-input-style ajuste" required>
+                    <select name="genre" id="genre" class="select-input-style ajuste" required>
                         <option value="" disabled selected hidden>Selecione</option>
                         <option value="masculino">Masculino</option>
                         <option value="feminino">Feminino</option>
@@ -155,18 +154,18 @@ body {
             </div>
             <div></div>
             <div class="register-columns-span">
-                <input type="number" name="cpf" id="cpf" placeholder="CPF: 000.000.000-00" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" oninput="maxLengthCheck(this)" maxlength="14" class="inputs-style register-inputs-size1" required onblur="TestaCPF(this.value)">
+                <input type="number" name="cpf" id="cpf" placeholder="CPF: 000.000.000-00" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" oninput="maxLengthCheck(this)" maxlength="14" class="inputs-style register-inputs-size1" required >
             </div>
             <div></div>
             <div>
-                <input type="tel" name="phonenumber1" id="phonenumber" placeholder="Tel.: (00) 0000-0000" maxlength="15" pattern="\(?[0-9]{2}\)?\ ?[0-9]{4,6}-?[0-9]{3,4}$" class="inputs-style register-inputs-size2" required>
+                <input type="tel" name="phonenumbers" id="phonenumbers" placeholder="Tel.: (00) 00000-0000" maxlength="15" class="inputs-style register-inputs-size2" required>
             </div>
             <div>
-                <input type="tel" name="phonenumber2" id="phonenumber" placeholder="Tel.: (00) 0000-0000" maxlength="15" pattern="\(?[0-9]{2}\)?\ ?[0-9]{4,6}-?[0-9]{3,4}$" class="inputs-style register-inputs-size2">
+                <input type="tel" name="phonenumbers" id="phonenumbers" placeholder="Tel.: (00) 0000-0000" maxlength="15" pattern="\(?[0-9]{2}\)?\ ?[0-9]{4,6}-?[0-9]{3,4}$" class="inputs-style register-inputs-size2">
             </div>
             <div></div>
             <div>
-                <select for="estado" name="estado" id="estado" class="select-input-style ajuste" required>
+                <select for="estado" name="state" id="state" class="select-input-style ajuste" required>
                     <option value="" disabled selected hidden>Estado</option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
@@ -202,21 +201,21 @@ body {
             </div>
             <div></div>
             <div>
-                <input type="text" name="bairro" id="bairro" placeholder="Bairro" class="inputs-style register-inputs-size2" required>
+                <input type="text" name="neighbourhood" id="neighbourhood" placeholder="Bairro" class="inputs-style register-inputs-size2" required>
             </div>
             <div>
-                <input type="text" name="cidade" id="cidade" placeholder="Cidade" class="inputs-style register-inputs-size2" required>
+                <input type="text" name="city" id="city" placeholder="Cidade" class="inputs-style register-inputs-size2" required>
             </div>
             <div></div>
             <div>
-                <input type="text" name="endereço" id="endereço" placeholder="Endereço" class="inputs-style register-inputs-size2" required>
+                <input type="text" name="adress" id="adress" placeholder="Endereço" class="inputs-style register-inputs-size2" required>
             </div>
             <div>
-                <input type="number" name="numero" id="numero" placeholder="Nº" class="inputs-style register-inputs-size2" required>
+                <input type="number" name="house_number" id="house_number" placeholder="Nº" class="inputs-style register-inputs-size2" required>
             </div>
             <div></div>
             <div class="register-columns-span">
-                <input type="submit" name="cadastrar" id="cadastrar" value="Cadastrar" class="inputs-style register-button-size">
+                <input type="submit" name="register_submit" id="register_submit" value="Register" class="inputs-style register-button-size">
             </div>
         </form>
     </div>
@@ -230,10 +229,15 @@ body {
     }
 </script>
 
+<script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script rel="text/javasript" src="javascript.js"></script>
+
 <!--FOOTER-->
 <div class="footer-grid">
     <div>
-        <a href="index.html"><img src="images/logo.png" alt="Logo Empório" class="footer-logo shadows"></a>
+        <a href="/"><img src="../img/logo.png" alt="Logo Empório" class="footer-logo shadows"></a>
     </div>
     <div>
         <list class="footer-general-text">
@@ -258,7 +262,7 @@ body {
     </div>
 </div>
 
-<script src="../js/javascript.js"></script>
+<script src="../bootstrap/js/javascript.js"></script>
 	<script src="../js/barra.js" ></script>
 
 <!--====================JS=================== -->

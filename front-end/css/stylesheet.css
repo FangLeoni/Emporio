@@ -1,0 +1,201 @@
+/*Arthur Silles Fernandes 1DS2*/
+/*Empório's stylesheet.css*/
+
+/*GENERAL*/
+* body {
+    background-color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*FOOTER*/
+.footer-grid {
+    display: grid;
+    grid-template-columns: auto auto 35vw;
+    grid-template-rows: 14vw;
+    margin-top: 3vw;
+    position: absolute;
+    left: 0vw;
+    right: 0vw;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+}
+.footer-logo {
+    display: block;
+    height: 10vw;
+    margin-left: 2vw;
+    transition: 1s;
+    text-align: left;
+}
+.footer-gradient-text {
+    background: -webkit-linear-gradient(120deg, rgba(130,90,252,1) 0%, rgba(221,18,241,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; /*Sometimes this command line can be set as a "warning" and the solution suggested is removing "-webkit-" from it, but if removed the wanted effect isn't apllied, this is probably a issue of the program.*/
+}
+.footer-general-text {
+    text-align: center;
+    font-size: 1.5vw;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.social-networks {
+    height: 3.5vw;
+    margin-top: -0.5vw;
+    transition: 1s;
+}
+.shadows:hover {
+    font-size: 1.7vw;
+    transform: scale(1.2);
+    transition: 1s;
+    filter: drop-shadow(0vw 0vw 0.5vw rgb(255, 0, 255));
+}
+
+/*STYLE contacts.html*/
+/*NOS ENCONTRE!*/
+.nos-encontre-text {
+    font-size: 5vw;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 2vw;
+}
+
+/*MAP*/
+.map-alignment {
+    margin-top: 2vw;
+    text-align: center;
+}
+.map-size {
+    height: 40vw;
+    width: 96.8vw;
+}
+
+/*STYLE login_register.html*/
+.page-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    margin-top: 5vw;
+    text-align: center;
+    grid-row-gap: 1vw;
+}
+.page-columns-span {
+    grid-row: 1 / 1;
+    grid-column: 1 / span 2;
+    text-align: center;
+}
+.inputs-style {
+    font-size: 1.42vw !important; 
+    border-radius: 0.4vw;
+    border-style: solid;
+    padding: 0.8vw;
+    border-color: #ccc;
+    color: rgb(170, 170, 170);
+}
+.responsive-titles {
+    height: 2.6vw;
+}
+::placeholder {
+    color: rgb(170, 170, 170);
+}
+select:invalid {
+    color: gray;
+}
+form .error {
+    color: #ff3d3d;
+    font-size: 1vw;
+}
+
+/*LOGIN FORM*/
+.login-grid {
+    display: grid;
+    grid-template-columns: 2vw 6.5vw 29.2vw;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    grid-row-gap: 2vw;
+    grid-column-gap: 1vw;
+}
+.login-inputs-size {
+    height: 1.6vw;
+    width: 27vw;
+}
+.responsive-login-icons {
+    height: 5vw;
+}
+.login-button-size {
+    height: 3.3vw;
+    width: 27vw; 
+}
+
+/*REGISTER FORM*/
+.register-grid {
+    display: grid;
+    grid-template-columns: 8.5vw 14vw 14vw;
+    grid-template-rows: 0.02vw auto auto auto 0.5vw auto auto auto auto auto auto;
+    align-items: center;
+    grid-row-gap: 1vw;
+    grid-column-gap: 1vw;
+}
+.title-register-gap {
+    grid-column: 1 / span 3;
+}
+.register-inputs-size1 {
+    height: 1.6vw;
+    width: 27vw;
+}
+.register-inputs-size2 {
+    height: 1.6vw;
+    width: 12vw;
+}
+.register-columns-span {
+    grid-column: 2 / span 2;
+}
+.register-button-size {
+    height: 3.3vw;
+    width: 27vw; 
+}
+.select-input-style {
+    font-size: 1.42vw; 
+    border-radius: 0.4vw;
+    padding: 0.8vw;
+    height: 3.5vw;
+    width: 14vw;
+    border: 0.14vw solid #ccc;
+    color: rgb(170, 170, 170);
+}
+.texto-labels-register {
+    font-size: 1.42vw;
+    text-align: left;
+    font-weight: 500;
+    color: rgb(170, 170, 170);
+}
+/*The style bellow removes the arrows from the number type inputs.*/
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+::placeholder {
+    color: rgb(170, 170, 170);
+}
+select:invalid {
+    color: gray;
+}
+    .center{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ajuste{
+        height: 2.1vw;
+        width: 12vw;
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }

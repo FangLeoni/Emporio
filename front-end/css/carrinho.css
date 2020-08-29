@@ -61,6 +61,20 @@ form::-webkit-scrollbar-thumb {
 	list-style: none;
 	
 }
+.deleteTest{
+	display: flex;
+	width:20px;
+	height:20px;
+	font-size: 10px;
+	font-weight: bolder;
+	color: #fff;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	background-color: #131418;
+	border-radius: 50%;
+	cursor: pointer;
+}
 
 .prod-container
 {
@@ -74,10 +88,10 @@ form::-webkit-scrollbar-thumb {
 .label{
 	padding-left:4vw;
 	width: 100%;
-	display:flex;
-	flex-direction: row;
+	display:grid;
 	align-items: center;
 	justify-content: space-around;
+	grid-template-columns: 0.5fr 1.5fr 2fr 1fr 1fr 1fr 1fr;
 	height: 10vw;
 	
 }
@@ -149,7 +163,7 @@ form::-webkit-scrollbar-thumb {
 
 .deletar{
 	color: white;
-	font-size: ;
+	
 }
 
 /* .titulo */
@@ -166,6 +180,7 @@ form::-webkit-scrollbar-thumb {
 {
 	border: 2px #c0239e solid;
 	display: flex;
+	
 }
 
 .TotalContainer > h4 
